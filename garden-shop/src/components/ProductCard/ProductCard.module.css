@@ -1,0 +1,104 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+}
+
+.imageWrap {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #fff;
+  aspect-ratio: 1 / 1;
+}
+
+.imageLink {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+}
+
+.imageLink img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--green);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.addButton {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  padding: 12px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--green);
+  color: #fff;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 0.2s,
+    transform 0.2s,
+    background 0.2s;
+}
+
+.imageWrap:hover .addButton,
+.addButton:focus-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.addButton:hover {
+  background: var(--green-dark);
+}
+
+@media (hover: none) {
+  .addButton {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.title:hover {
+  color: var(--green);
+}
+
+.prices {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.oldPrice {
+  color: var(--muted);
+  font-size: 18px;
+  text-decoration: line-through;
+}

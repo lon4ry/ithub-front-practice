@@ -1,0 +1,43 @@
+.notification {
+  position: fixed;
+  top: 100px;
+  right: 40px;
+  z-index: 1000;
+  display: flex;
+  gap: 16px;
+  max-width: 360px;
+  padding: 20px 24px;
+  border-radius: 12px;
+  background: var(--green);
+  color: #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.title {
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.text {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.close {
+  align-self: flex-start;
+  border: 0;
+  background: none;
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+}
+
+@media (max-width: 600px) {
+  .notification {
+    top: auto;
+    right: 16px;
+    bottom: 16px;
+    left: 16px;
+  }
+}

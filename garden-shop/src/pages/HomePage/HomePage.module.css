@@ -1,0 +1,160 @@
+.page {
+  padding-bottom: 80px;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 520px;
+  overflow: hidden;
+  color: #fff;
+}
+
+.heroImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.6));
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 72px;
+}
+
+.heroTitle {
+  font-size: 96px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.heroText {
+  margin: 16px 0 32px;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.heroButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  height: 48px;
+  padding: 0 32px;
+  border-radius: 8px;
+  background: var(--green);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.heroButton:hover {
+  background: var(--green-dark);
+}
+
+.section {
+  margin-top: 64px;
+}
+
+.sectionHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.sectionTitle {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.sectionLink {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.sectionLink:hover {
+  color: var(--green);
+}
+
+.discount {
+  margin-top: 64px;
+  background: var(--green);
+  color: #fff;
+}
+
+.discountInner {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 60px;
+  align-items: center;
+  padding: 56px 0;
+}
+
+.discountTitle {
+  margin-bottom: 16px;
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.discountText {
+  max-width: 420px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.discountForm {
+  padding: 28px;
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--text);
+}
+
+.discountFormTitle {
+  margin-bottom: 16px;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: 380px;
+  }
+
+  .heroTitle {
+    font-size: 64px;
+  }
+
+  .heroText {
+    font-size: 20px;
+  }
+
+  .heroInner {
+    padding-bottom: 40px;
+  }
+
+  .sectionTitle {
+    font-size: 28px;
+  }
+
+  .discountInner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 40px 0;
+  }
+
+  .discountTitle {
+    font-size: 32px;
+  }
+}

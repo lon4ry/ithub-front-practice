@@ -1,0 +1,84 @@
+:root {
+  --green: #339933;
+  --green-dark: #2a7f2a;
+  --text: #282828;
+  --muted: #8b8b8b;
+  --light: #f1f3f4;
+  --border: #e1e1e1;
+  --radius: 12px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', 'Segoe UI', Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: min(1240px, 100% - 40px);
+  margin-inline: auto;
+}
+
+.page {
+  padding: 40px 0 80px;
+}
+
+.pageTitle {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 24px 0 56px;
+  }
+
+  .pageTitle {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+}
